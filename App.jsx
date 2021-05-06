@@ -1,25 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
-import Hello from './src/components/Hello';
+import AppBar from './src/components/AppBar';
+import MemoList from './src/components/MemoList';
+import CircleButton from './src/components/CircleButton';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Hello bang>World</Hello>
-      <Hello bang style={{fontSize: 16 }}>Small World</Hello>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <AppBar />
+      <MemoList />
+      <CircleButton>+</CircleButton>
     </View>
+
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#f0f4f8',
   },
 });
