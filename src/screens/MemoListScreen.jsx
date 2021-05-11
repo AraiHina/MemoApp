@@ -12,7 +12,7 @@ export default function MemoListScreen() {
             <MemoList />
             <CircleButton name="plus" />
         </View>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
