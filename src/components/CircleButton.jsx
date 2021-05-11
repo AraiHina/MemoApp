@@ -1,19 +1,26 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { string } from 'prop-types';
+import { View, StyleSheet } from 'react-native';
+import { string, shape } from 'prop-types';
+
+import Icon from './Icon';
 
 export default function CircleButton(props) {
     // ↓propsというオブジェクトの中からchildrenという値だけを抜き出すという分割代入
-    const { children } = props;
+    const { style, name } = props;
     return (
-      <View style={styles.circleButton}>
-        <Text style={styles.circleButtonLabel}>{children}</Text>
+      <View style={[styles.circleButton, style]}>
+        <Icon name={name} size={40} color="white" />
       </View>
     );
 }
 
 CircleButton.propTypes = {
-    children: string.isRequired,
+    style: shape(),
+    name: string.isRequired,
+};
+
+CircleButton.defaultProps = {
+  style: null,
 };
 
 const styles = StyleSheet.create({
