@@ -2,10 +2,9 @@ import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 import { string, shape, func } from 'prop-types';
 
-import Icon from './Icon';
+import Icon from './icon';
 
 export default function CircleButton(props) {
-    // ↓propsというオブジェクトの中からchildrenという値だけを抜き出すという分割代入
     const { style, name, onPress } = props;
     return (
       <TouchableOpacity style={[styles.circleButton, style]}> onPress={onPress}
